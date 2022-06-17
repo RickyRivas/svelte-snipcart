@@ -21,7 +21,7 @@ __export(stdin_exports, {
 });
 module.exports = __toCommonJS(stdin_exports);
 var import_index_1259f1f6 = require("../../chunks/index-1259f1f6.js");
-var import_stores_d1750714 = require("../../chunks/stores-d1750714.js");
+var import_stores_86d96c89 = require("../../chunks/stores-86d96c89.js");
 var Product_svelte_svelte_type_style_lang = /* @__PURE__ */ (() => ".product.svelte-1p0msis{max-width:max-content;display:flex;justify-content:center;align-items:center;flex-direction:column}.btns.svelte-1p0msis{display:flex}a.svelte-1p0msis,button.svelte-1p0msis{width:100px;height:30px;color:white;background-color:orangered;text-decoration:none;display:flex;justify-content:center;align-items:center;border:none;margin:0.5em}img.svelte-1p0msis{width:100%;max-height:400px}")();
 const css$1 = {
   code: ".product.svelte-1p0msis{max-width:max-content;display:flex;justify-content:center;align-items:center;flex-direction:column}.btns.svelte-1p0msis{display:flex}a.svelte-1p0msis,button.svelte-1p0msis{width:100px;height:30px;color:white;background-color:orangered;text-decoration:none;display:flex;justify-content:center;align-items:center;border:none;margin:0.5em}img.svelte-1p0msis{width:100%;max-height:400px}",
@@ -55,5 +55,5 @@ const Products = (0, import_index_1259f1f6.c)(($$result, $$props, $$bindings, sl
 </section>`;
 });
 const Listing = (0, import_index_1259f1f6.c)(($$result, $$props, $$bindings, slots) => {
-  return `${(0, import_index_1259f1f6.v)(Products, "Products").$$render($$result, { productsList: import_stores_d1750714.p }, {}, {})}`;
+  return `${(0, import_index_1259f1f6.v)(Products, "Products").$$render($$result, { productsList: import_stores_86d96c89.p }, {}, {})}`;
 });

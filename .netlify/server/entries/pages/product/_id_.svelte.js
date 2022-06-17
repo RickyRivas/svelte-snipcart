@@ -22,7 +22,7 @@ __export(stdin_exports, {
 });
 module.exports = __toCommonJS(stdin_exports);
 var import_index_1259f1f6 = require("../../../chunks/index-1259f1f6.js");
-var import_stores_d1750714 = require("../../../chunks/stores-d1750714.js");
+var import_stores_86d96c89 = require("../../../chunks/stores-86d96c89.js");
 var _id__svelte_svelte_type_style_lang = /* @__PURE__ */ (() => "section.svelte-1m9pt9k{padding:1em}.full-card.svelte-1m9pt9k{width:100%;max-width:1000px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;margin:auto}img.svelte-1m9pt9k{width:400px}button.svelte-1m9pt9k{width:100px;height:30px;color:white;background-color:orangered;text-decoration:none;display:flex;justify-content:center;align-items:center;border:none;margin:0.5em}")();
 const css = {
   code: "section.svelte-1m9pt9k{padding:1em}.full-card.svelte-1m9pt9k{width:100%;max-width:1000px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;margin:auto}img.svelte-1m9pt9k{width:400px}button.svelte-1m9pt9k{width:100px;height:30px;color:white;background-color:orangered;text-decoration:none;display:flex;justify-content:center;align-items:center;border:none;margin:0.5em}",
@@ -30,7 +30,7 @@ const css = {
 };
 async function load({ params }) {
   const id = params.id;
-  const foundProd = import_stores_d1750714.p.find((prod) => prod.id == id);
+  const foundProd = import_stores_86d96c89.p.find((prod) => prod.id == id);
   return { props: { product: foundProd } };
 }
 const U5Bidu5D = (0, import_index_1259f1f6.c)(($$result, $$props, $$bindings, slots) => {
