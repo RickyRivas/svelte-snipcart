@@ -16,6 +16,6 @@ export const productsList = [
         description:
             'The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface.',
         imageUrl:
-             '/apple.png'
+            '/apple.png'
     }
 ];

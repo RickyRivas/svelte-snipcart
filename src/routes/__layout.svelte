@@ -104,6 +104,15 @@
 		</script>
 	{/if}
 </svelte:head>
+<main>
+	<!-- Main Navigation-->
+	<Nav />
+	<!-- Content -->
+	<slot />
+	<!-- Footer-->
+	<footer>Footer</footer>
+</main>
 
-<Nav />
-<slot />
+<style lang="scss">
+	@import '../scss/global.scss';
+</style>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+// @import url("https://fonts.googleapis.com/css2?family=Bevan&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+// Scale font-szie from a min of 16px (at 320px viewpoort) to a maximum of 22px (at a 1000px viewport)
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+
+
+$color: skyblue;
+// Default whites/greys
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+$light-black: #222;
+$grays: ("100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900);
+$gold-gradient: linear-gradient( to right #5e3d04, #fef272);
+// Color pallet
+$blue: #0d6efd;
+$dark-blue: #0333a0;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #ef2e2d;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #5aa26e;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$brown: #2d2d2d;
+$gold: #bc9366;
+$dark-gold: #A58861;
+$brick-red: #B3121E;
+$darker-primary: #822835;
+
+$colors: ("blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-800);
+// theme-color-variables
+$primary: $brick-red;
+$primary-light: $gray-200;
+$secondary: $red;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+// Project Colors 
+$theme-colors: ("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark);
+// border-radius-variables
+$border-radius: .25rem;
+$border-radius-sm: .2rem;
+$border-radius-lg: .3rem;
+$border-radius-pill: 50rem;
+
+// box-shadow-variables
+$box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175);
+$box-shadow-inset: inset 0 1px 2px rgba($black, .075);
+// $font-size-base effects the font size of the body text
+$font-size-root: null;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+// Spacing
+$padding-sm: .5rem;
+$padding-md: 1rem;
+$padding-lg: 2rem;
+$padding-xl: 4rem;
+$margin-sm: .5rem;
+$margin-md: 1rem;
+$margin-lg: 2rem;
+$margin-xl: 4rem;
+// Text color
+$para-color: #d1d1d1;
+$text-color: #d1d1d1;
+//
+// $gradient-one: linear-gradient(180deg, rgba(0, 0, 0, 0.9556197478991597) 0%, rgba(0, 0, 0, 0.8603816526610644) 49%, rgba(0, 0, 0, 0.9668242296918768) 100%);
+$gradient-one: linear-gradient(to top, #000000, transparent, transparent 50%, #000000 100%);

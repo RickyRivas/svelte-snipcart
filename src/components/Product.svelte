@@ -6,7 +6,7 @@
 	<img src={product.imageUrl} alt="" />
 	<h1>{product.name}</h1>
 	<div class="btns">
-		<a href={`/product/` + product.id}>View Item</a>
+		<a href={`/products/` + product.id}>View Item</a>
 		<button
 			class="snipcart-add-item"
 			data-item-id={product.id}
@@ -18,32 +18,36 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
+	@import '../scss/global.scss';
+
 	.product {
 		max-width: max-content;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-	}
-	.btns {
-		display: flex;
-	}
-	a,
-	button {
-		width: 100px;
-		height: 30px;
-		color: white;
-		background-color: orangered;
-		text-decoration: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border: none;
-		margin: 0.5em;
-	}
-	img {
-		width: 100%;
-		max-height: 400px;
+
+		.btns {
+			display: flex;
+		}
+
+		a,
+		button {
+			width: 100px;
+			height: 30px;
+			color: $color;
+			background-color: green;
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: none;
+			margin: 0.5em;
+		}
+		img {
+			width: 100%;
+			max-height: 400px;
+		}
 	}
 </style>

@@ -1,6 +1,8 @@
+import preprocess from 'svelte-preprocess';
 import * as path from 'path';
 import adapter from '@sveltejs/adapter-auto';
 import { imagetools } from 'vite-imagetools';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -14,7 +16,10 @@ const config = {
 				$img: path.resolve('src/images')
 			}
 		}
-	}
+	},
+	preprocess: preprocess({
+		 
+	 })
 };
 
 export default config;
