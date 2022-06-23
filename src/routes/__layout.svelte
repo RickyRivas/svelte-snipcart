@@ -1,7 +1,7 @@
 <script>
 	import { browser } from '$app/env';
 	import Nav from '../components/Nav.svelte';
-	import global from '../global.css';
+	import global from '../scss/global.scss';
 </script>
 
 <svelte:head>
@@ -103,6 +103,10 @@
 			})();
 		</script>
 	{/if}
+	<link
+		href="https://api.fontshare.com/v2/css?f[]=general-sans@500,300,400,700&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 <main>
 	<!-- Main Navigation-->
@@ -110,9 +114,4 @@
 	<!-- Content -->
 	<slot />
 	<!-- Footer-->
-	<footer>Footer</footer>
 </main>
-
-<style lang="scss">
-	@import '../scss/global.scss';
-</style>

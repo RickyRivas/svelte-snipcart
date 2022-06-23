@@ -10,15 +10,31 @@
 	{/each}
 </section>
 
-<style>
+<style lang="scss">
 	h2 {
 		text-align: center;
 	}
 	#products {
 		width: 100%;
-		display: grid;
-		grid-gap: 1em;
-		place-items: center;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 1em;
+
+		@media only screen and (max-width: 47.975em) {
+			font-size: 3.2vw;
+			/* mintab 480w */
+		}
+
+		@media only screen and (min-width: 48em) {
+			font-size: 1.7vw;
+			/* mintab 480w */
+		}
+
+		@media only screen and (min-width: 61.25em) {
+			font-size: inherit;
+			/* custom opt-out 979oo */
+		}
 	}
 </style>
