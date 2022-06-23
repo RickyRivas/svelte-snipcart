@@ -19,5 +19,13 @@ export const productsList = [
         imageUrl:
             '/iphone.png',
         inStock: 9
+    },
+    {
+        id: 3,
+        name: 'Ipad',
+        price: 1799,
+        description: `The iPad is designed for consuming various types of media -- reading books, browsing the Web and watching videos, in particular. It's also marketed as a portable gaming device, and there are hundreds of games for sale in the iPad App Store.`,
+        imageUrl: '/ipad.png',
+        inStock: 2
     }
-];
+]

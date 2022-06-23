@@ -8,6 +8,8 @@
 		<div class="in-stock {product.inStock ? '' : 'oos'}">
 			{#if product.inStock == 0}
 				<p>Out of stock</p>
+			{:else if product.inStock <= 5}
+				<p>Almost Gone!</p>
 			{:else}
 				<p>{product.inStock} Left in stock!</p>
 			{/if}

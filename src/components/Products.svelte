@@ -21,7 +21,8 @@
 		align-items: center;
 		flex-wrap: wrap;
 		padding: 1em;
-
+		max-width: 1200px;
+		margin: auto;
 		@media only screen and (max-width: 47.975em) {
 			font-size: 3.2vw;
 			/* mintab 480w */
