@@ -54,6 +54,7 @@
 		.rem {
 			border-top-left-radius: 2em;
 			border-bottom-left-radius: 2em;
+			background-color: #e5383b;
 		}
 		.add {
 			border-top-right-radius: 2em;

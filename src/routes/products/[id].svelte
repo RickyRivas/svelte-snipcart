@@ -39,7 +39,12 @@
 		</div>
 		<div class="wrap">
 			<div class="price">
-				<p>$<span>{calcedPrice}</span></p>
+				<p>
+					{#if quantity >= 2}
+						x{quantity} at
+					{/if}
+					$<span>{calcedPrice}</span>
+				</p>
 			</div>
 			<div class="prev control"><img src="/left-chevron.svg" alt="" width="20" height="20" /></div>
 			<div class="next control"><img src="/right-chevron.svg" alt="" width="20" height="20" /></div>
