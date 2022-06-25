@@ -6,11 +6,11 @@ export const productsList = [{
         images: [
             '/mac.png', '/mac.png', '/mac.png'
         ],
-        inStock: 1,
+        inStock: 0,
         options: {
             storage: [{
                 amount: '1TB',
-                additionalValue: 200
+                additionalValue: 0
             }]
         }
 
@@ -28,7 +28,7 @@ export const productsList = [{
             storage: [
                 {
                     amount: '64GB',
-                    additionalValue: 200
+                    additionalValue: 0
                 },
                 {
                     amount: '128GB',
@@ -53,7 +53,7 @@ export const productsList = [{
             storage: [
                 {
                     amount: '64GB',
-                    additionalValue: 200
+                    additionalValue: 0
                 },
                 {
                     amount: '128GB',

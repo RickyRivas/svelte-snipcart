@@ -50,10 +50,13 @@
 			border: 0;
 			transition: all 0.5s;
 			cursor: pointer;
-			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+			color: #000;
+
 			&.active {
-				background-color: #fae1dd;
 				color: #000;
+				box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+					rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 			}
 		}
 	}

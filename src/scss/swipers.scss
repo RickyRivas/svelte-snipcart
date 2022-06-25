@@ -29,6 +29,12 @@
 	        top: 50%;
 	        transform: translate(0%, -50%);
 	        z-index: 2;
+	        cursor: pointer;
+	        transition: all .5s;
+
+	        &:hover {
+	            background-color: #f4f3ee;
+	        }
 
 	        img {
 	            width: .6em;

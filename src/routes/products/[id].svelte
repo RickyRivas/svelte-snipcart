@@ -43,7 +43,10 @@
 	findValue(storageValue);
 	//
 	let price = product.price;
-
+	let calcedPrice;
+	$: {
+		calcedPrice = price + selectedValue.additionalValue;
+	}
 	// creating a string and concatenating the values of each storage option for its value
 	const storageOptionsArr = product.options.storage;
 	let optionsStr = '';
@@ -65,7 +68,7 @@
 		<div class="wrap">
 			<div class="price">
 				<p>
-					$<span>{price}</span>
+					$<span>{calcedPrice}</span>
 				</p>
 			</div>
 			<div class="prev control"><img src="/left-chevron.svg" alt="" width="20" height="20" /></div>
