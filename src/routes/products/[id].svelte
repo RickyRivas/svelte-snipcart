@@ -1,14 +1,16 @@
 <script context="module">
+	import OptionPicker from './../../components/OptionPicker.svelte';
 	// importing the products array from stores.js and finding the item with the same id as the params.id
 	import { productsList } from '../../stores';
 	import QuantityWidget from '../../components/QuantityWidget.svelte';
 	// Import Swiper
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
 	import 'swiper/css';
-	import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+	import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 	// custom swiper styles
 	import swipers from '../../scss/swipers.scss';
 	import 'swiper/css/navigation';
+	import 'swiper/css/autoplay';
 
 	export async function load({ params }) {
 		const id = params.id;
@@ -23,13 +25,36 @@
 
 <script>
 	export let product;
-	// connecting qty to quantity via binding the props
+	// getting vars from children components
 	let quantity;
-	let price = product.price;
-	let calcedPrice;
+
+	// storage value
+	let storageValue = 0;
+	let selectedValue;
+
 	$: {
-		calcedPrice = price * quantity;
+		findValue(storageValue);
 	}
+
+	function findValue(index) {
+		selectedValue = product.options.storage[index];
+	}
+
+	findValue(storageValue);
+	//
+	let price = product.price;
+
+	// creating a string and concatenating the values of each storage option for its value
+	const storageOptionsArr = product.options.storage;
+	let optionsStr = '';
+	function fillOptionsStr(arr) {
+		let divider = '|';
+		arr.forEach((obj) => {
+			let str = `${obj.amount}[+${obj.additionalValue}]` + divider;
+			optionsStr = optionsStr + str;
+		});
+	}
+	fillOptionsStr(storageOptionsArr);
 </script>
 
 <section>
@@ -40,19 +65,19 @@
 		<div class="wrap">
 			<div class="price">
 				<p>
-					{#if quantity >= 2}
-						x{quantity} at
-					{/if}
-					$<span>{calcedPrice}</span>
+					$<span>{price}</span>
 				</p>
 			</div>
 			<div class="prev control"><img src="/left-chevron.svg" alt="" width="20" height="20" /></div>
 			<div class="next control"><img src="/right-chevron.svg" alt="" width="20" height="20" /></div>
 			<Swiper
-				modules={[Navigation]}
+				modules={[Navigation, Autoplay]}
 				navigation={{
 					prevEl: '.prev',
 					nextEl: '.next'
+				}}
+				autoplay={{
+					delay: 10000
 				}}
 				class="prodSwiper"
 				spaceBetween={0}
@@ -68,6 +93,7 @@
 		<div class="config">
 			<p class="desc">{product.description}</p>
 			<QuantityWidget bind:qty={quantity} {product} />
+			<OptionPicker {product} bind:storageValue storageOptions={product.options.storage} />
 			<div class="btns">
 				<a href="/listing">Go back</a>
 				<button
@@ -78,6 +104,9 @@
 					data-item-image={product.imageUrl}
 					data-item-name={product.name}
 					data-item-quantity={quantity}
+					data-item-custom1-name="Storage"
+					data-item-custom1-value={selectedValue.amount}
+					data-item-custom1-options={optionsStr}
 					disabled={product.inStock ? '' : 'disable'}
 				>
 					{#if product.inStock == 0}

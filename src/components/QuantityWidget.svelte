@@ -50,6 +50,7 @@
 		.rem {
 			width: 3em;
 			height: 3em;
+			cursor: pointer;
 		}
 		.rem {
 			border-top-left-radius: 2em;
