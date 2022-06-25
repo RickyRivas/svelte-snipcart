@@ -14,7 +14,7 @@
 				<p>{product.inStock} Left in stock!</p>
 			{/if}
 		</div>
-		<img src={product.imageUrl} alt="" />
+		<img src={product.images[0]} alt="" />
 	</div>
 
 	<h3>{product.name}</h3>

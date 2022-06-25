@@ -2,6 +2,12 @@
 	// importing the products array from stores.js and finding the item with the same id as the params.id
 	import { productsList } from '../../stores';
 	import QuantityWidget from '../../components/QuantityWidget.svelte';
+	// Import Swiper
+	import { Swiper, SwiperSlide } from 'swiper/svelte';
+	import 'swiper/css';
+	// custom swiper styles
+	import swipers from '../../scss/swipers.scss';
+
 	export async function load({ params }) {
 		const id = params.id;
 		const foundProd = productsList.find((prod) => prod.id == id);
@@ -29,12 +35,15 @@
 		<div class="prod-details">
 			<h1>{product.name}</h1>
 		</div>
-
-		<div class="img-container">
-			<img src={product.imageUrl} alt="" />
+		<div class="wrap">
 			<div class="price">
 				<p>$<span>{calcedPrice}</span></p>
 			</div>
+			<Swiper class="prodSwiper" spaceBetween={50} slidesPerView={1} loop={true}>
+				<SwiperSlide data-slide="1"><img src={product.images[0]} alt={product.name} /></SwiperSlide>
+				<SwiperSlide data-slide="2"><img src={product.images[1]} alt={product.name} /></SwiperSlide>
+				<SwiperSlide data-slide="3"><img src={product.images[2]} alt={product.name} /></SwiperSlide>
+			</Swiper>
 		</div>
 
 		<div class="config">
@@ -205,16 +214,5 @@
 				}
 			}
 		}
-	}
-	/* Chrome, Safari, Edge, Opera */
-	input::-webkit-outer-spin-button,
-	input::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
-	}
-
-	/* Firefox */
-	input[type='number'] {
-		-moz-appearance: textfield;
 	}
 </style>
