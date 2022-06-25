@@ -5,8 +5,10 @@
 	// Import Swiper
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
 	import 'swiper/css';
+	import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 	// custom swiper styles
 	import swipers from '../../scss/swipers.scss';
+	import 'swiper/css/navigation';
 
 	export async function load({ params }) {
 		const id = params.id;
@@ -39,7 +41,19 @@
 			<div class="price">
 				<p>$<span>{calcedPrice}</span></p>
 			</div>
-			<Swiper class="prodSwiper" spaceBetween={50} slidesPerView={1} loop={true}>
+			<div class="prev control"><img src="/left-chevron.svg" alt="" width="20" height="20" /></div>
+			<div class="next control"><img src="/right-chevron.svg" alt="" width="20" height="20" /></div>
+			<Swiper
+				modules={[Navigation]}
+				navigation={{
+					prevEl: '.prev',
+					nextEl: '.next'
+				}}
+				class="prodSwiper"
+				spaceBetween={0}
+				slidesPerView={1}
+				loop={true}
+			>
 				<SwiperSlide data-slide="1"><img src={product.images[0]} alt={product.name} /></SwiperSlide>
 				<SwiperSlide data-slide="2"><img src={product.images[1]} alt={product.name} /></SwiperSlide>
 				<SwiperSlide data-slide="3"><img src={product.images[2]} alt={product.name} /></SwiperSlide>
@@ -80,7 +94,7 @@
 
 		.card {
 			width: 100%;
-			max-width: 1000px;
+			max-width: 700px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -126,6 +140,7 @@
 			.config {
 				p {
 					text-align: justify;
+					text-align-last: center;
 				}
 				a,
 				button {
@@ -139,6 +154,7 @@
 					align-items: center;
 					border: none;
 					margin: 0.5em;
+					box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 				}
 				.btns {
 					display: flex;

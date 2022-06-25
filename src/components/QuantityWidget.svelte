@@ -8,11 +8,16 @@
 	function decrement() {
 		qty = qty - 1;
 	}
+	function checkInput() {
+		if (qty <= 0 || qty > maxCount) {
+			qty = 1;
+		}
+	}
 </script>
 
 <div class="container">
 	<button class="rem" on:click={decrement} disabled={qty <= 1 ? 'true' : ''}>-</button>
-	<input class="qty" type="number" bind:value={qty} />
+	<input class="qty" type="number" bind:value={qty} on:blur={checkInput} />
 	<button class="add" on:click={increment} disabled={qty >= maxCount ? 'true' : ''}>+</button>
 </div>
 
@@ -23,7 +28,7 @@
 		align-items: center;
 		border-radius: 1em;
 		width: max-content;
-		margin: auto;
+		margin: 0 auto 1em;
 		box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 		button {
 			border: 0;
