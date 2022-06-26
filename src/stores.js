@@ -1,5 +1,4 @@
 
-
 export const productsList = [ {
         id: 1,
         name: 'Macbook',
@@ -8,7 +7,7 @@ export const productsList = [ {
         images: [
             '/mac.png', '/mac.png', '/mac.png'
         ],
-        inStock: 0,
+        inStock: 1,
         options: {
             storage: [{
                 amount: '1TB',

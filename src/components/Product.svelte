@@ -1,6 +1,42 @@
 <script>
 	import Product from './Product.svelte';
 	export let product;
+	// getting vars from children components
+	let quantity;
+
+	// storage value
+	let storageValue = 0;
+	let selectedValue;
+
+	$: {
+		findValue(storageValue);
+	}
+
+	function findValue(index) {
+		selectedValue = product.options.storage[index];
+	}
+
+	findValue(storageValue);
+	//
+	let price = product.price;
+	let calcedPrice;
+	$: {
+		calcedPrice = price + selectedValue.additionalValue;
+	}
+	$: {
+		optionsStr = optionsStr.slice(0, -1);
+	}
+	// creating a string and concatenating the values of each storage option for its value
+	const storageOptionsArr = product.options.storage;
+	let optionsStr = '';
+	function fillOptionsStr(arr) {
+		let divider = '|';
+		arr.forEach((obj) => {
+			let str = `${obj.amount}[+${obj.additionalValue}]` + divider;
+			optionsStr = optionsStr + str;
+		});
+	}
+	fillOptionsStr(storageOptionsArr);
 </script>
 
 <div class="product ">
@@ -22,12 +58,17 @@
 		<a href={`/products/` + product.id}>View Item</a>
 		<button
 			class="snipcart-add-item"
-			disabled={product.inStock ? '' : 'disable'}
 			data-item-id={product.id}
 			data-item-price={product.price}
 			data-item-description={product.description}
 			data-item-image={product.imageUrl}
 			data-item-name={product.name}
+			data-item-quantity={quantity}
+			data-item-custom1-name="Storage"
+			data-item-url={product.url}
+			data-item-custom1-value={selectedValue.amount}
+			data-item-custom1-options={optionsStr}
+			disabled={product.inStock ? '' : 'disable'}
 		>
 			{#if product.inStock == 0}
 				Out of Stock
