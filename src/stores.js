@@ -1,4 +1,6 @@
-export const productsList = [{
+
+
+export const productsList = [ {
         id: 1,
         name: 'Macbook',
         price: 2999,
@@ -12,8 +14,9 @@ export const productsList = [{
                 amount: '1TB',
                 additionalValue: 0
             }]
-        }
-
+    },
+        url: '/products/1'
+        
     },
     {
         id: 2,
@@ -39,7 +42,8 @@ export const productsList = [{
                     additionalValue: 600
                 }
             ]
-        }
+        },
+        url: '/products/2'
 
     },
     {
@@ -60,7 +64,8 @@ export const productsList = [{
                     additionalValue: 400
                 }
             ]
-        }
+        },
+        url: '/products/3'
 
     }
 ]

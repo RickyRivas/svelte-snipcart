@@ -111,6 +111,7 @@
 					data-item-name={product.name}
 					data-item-quantity={quantity}
 					data-item-custom1-name="Storage"
+					data-item-url={product.url}
 					data-item-custom1-value={selectedValue.amount}
 					data-item-custom1-options={optionsStr}
 					disabled={product.inStock ? '' : 'disable'}
