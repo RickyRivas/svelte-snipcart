@@ -47,6 +47,9 @@
 	$: {
 		calcedPrice = price + selectedValue.additionalValue;
 	}
+	$: {
+		optionsStr = optionsStr.slice(0, -1);
+	}
 	// creating a string and concatenating the values of each storage option for its value
 	const storageOptionsArr = product.options.storage;
 	let optionsStr = '';
