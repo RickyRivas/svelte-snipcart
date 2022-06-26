@@ -13,7 +13,6 @@
 		<div class="navlinks-overlay" />
 		<ul class="nav-links {navState ? 'is-active' : ''}">
 			<li class="nav-link active"><a href="/" on:click={toggleNav}>Home</a></li>
-			<li class="nav-link"><a href="/listing" on:click={toggleNav}>Products</a></li>
 		</ul>
 		<button
 			on:click={toggleNav}

@@ -101,7 +101,7 @@
 			<QuantityWidget bind:qty={quantity} {product} />
 			<OptionPicker {product} bind:storageValue storageOptions={product.options.storage} />
 			<div class="btns">
-				<a href="/listing">Go back</a>
+				<a href="/">Go back</a>
 				<button
 					class="snipcart-add-item"
 					data-item-id={product.id}

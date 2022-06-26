@@ -1,5 +1,7 @@
 <script>
-	let name = 'Ricky';
+	import { productsList } from '../stores';
+	// importing products
+	import Products from '../components/Products.svelte';
 </script>
 
-<h1>Welcome Home, {name}</h1>
+<Products {productsList} />

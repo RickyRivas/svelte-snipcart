@@ -1,5 +1,4 @@
 <script>
-	import Product from './Product.svelte';
 	export let product;
 	// getting vars from children components
 	let quantity;
