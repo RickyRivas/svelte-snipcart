@@ -54,7 +54,7 @@
 
 	<h3>{product.name}</h3>
 	<div class="btns">
-		<a href={`/products/` + product.id}>View Item</a>
+		<a href={`/` + product.name}>View Item</a>
 		<button
 			class="snipcart-add-item"
 			data-item-id={product.id}

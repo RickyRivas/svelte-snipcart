@@ -1,20 +1,20 @@
 <script context="module">
-	import OptionPicker from './../../components/OptionPicker.svelte';
+	import OptionPicker from '../components/OptionPicker.svelte';
 	// importing the products array from stores.js and finding the item with the same id as the params.id
-	import { productsList } from '../../stores';
-	import QuantityWidget from '../../components/QuantityWidget.svelte';
+	import { productsList } from '../stores';
+	import QuantityWidget from '../components/QuantityWidget.svelte';
 	// Import Swiper
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
 	import 'swiper/css';
 	import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 	// custom swiper styles
-	import swipers from '../../scss/swipers.scss';
+	import swipers from '../scss/swipers.scss';
 	import 'swiper/css/navigation';
 	import 'swiper/css/autoplay';
 
 	export async function load({ params }) {
-		const id = params.id;
-		const foundProd = productsList.find((prod) => prod.id == id);
+		const name = params.name;
+		const foundProd = productsList.find((prod) => prod.name == name);
 		return {
 			props: {
 				product: foundProd
@@ -111,7 +111,7 @@
 					data-item-name={product.name}
 					data-item-quantity={quantity}
 					data-item-custom1-name="Storage"
-					data-item-url={product.url}
+					data-item-url={'/' + product.name}
 					data-item-custom1-value={selectedValue.amount}
 					data-item-custom1-options={optionsStr}
 					disabled={product.inStock ? '' : 'disable'}

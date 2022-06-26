@@ -14,8 +14,6 @@ export const productsList = [ {
                 additionalValue: 0
             }]
     },
-        url: '/products/1'
-        
     },
     {
         id: 2,
@@ -41,8 +39,7 @@ export const productsList = [ {
                     additionalValue: 600
                 }
             ]
-        },
-        url: '/products/2'
+        }
 
     },
     {
@@ -63,8 +60,6 @@ export const productsList = [ {
                     additionalValue: 400
                 }
             ]
-        },
-        url: '/products/3'
-
+        }
     }
 ]
