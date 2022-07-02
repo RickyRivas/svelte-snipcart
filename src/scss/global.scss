@@ -1,10 +1,9 @@
-
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 html {
   font-size: 16px;
   font-family: 'General Sans', sans-serif;
@@ -23,15 +22,23 @@ html {
   }
 }
 
-	.prodSwiper {
-		height: 10em;
-		width: 100%;
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0;
-	}
+@media (min-width: 0px) {
+  body {
+    overflow-x: hidden;
+    position: relative;
+    height: 100%;
+  }
+}
+
+.prodSwiper {
+  height: 10em;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
 
 $color: skyblue;
 // Default whites/greys
@@ -48,15 +55,15 @@ $gray-900: #212529;
 $black: #000;
 $light-black: #222;
 $grays: ("100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900);
-$gold-gradient: linear-gradient( to right #5e3d04, #fef272);
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900);
+$gold-gradient: linear-gradient(to right #5e3d04, #fef272);
 // Color pallet
 $blue: #0d6efd;
 $dark-blue: #0333a0;
@@ -76,18 +83,18 @@ $brick-red: #B3121E;
 $darker-primary: #822835;
 
 $colors: ("blue": $blue,
-    "indigo": $indigo,
-    "purple": $purple,
-    "pink": $pink,
-    "red": $red,
-    "orange": $orange,
-    "yellow": $yellow,
-    "green": $green,
-    "teal": $teal,
-    "cyan": $cyan,
-    "white": $white,
-    "gray": $gray-600,
-    "gray-dark": $gray-800);
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800);
 // theme-color-variables
 $primary: $brick-red;
 $primary-light: $gray-200;
@@ -100,13 +107,13 @@ $light: $gray-100;
 $dark: $gray-900;
 // Project Colors 
 $theme-colors: ("primary": $primary,
-    "secondary": $secondary,
-    "success": $success,
-    "info": $info,
-    "warning": $warning,
-    "danger": $danger,
-    "light": $light,
-    "dark": $dark);
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark);
 // border-radius-variables
 $border-radius: .25rem;
 $border-radius-sm: .2rem;
@@ -158,14 +165,14 @@ $text-color: #d1d1d1;
 // $gradient-one: linear-gradient(180deg, rgba(0, 0, 0, 0.9556197478991597) 0%, rgba(0, 0, 0, 0.8603816526610644) 49%, rgba(0, 0, 0, 0.9668242296918768) 100%);
 $gradient-one: linear-gradient(to top, #000000, transparent, transparent 50%, #000000 100%);
 
-	/* Chrome, Safari, Edge, Opera */
-	input::-webkit-outer-spin-button,
-	input::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
-	}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-	/* Firefox */
-	input[type='number'] {
-		-moz-appearance: textfield;
-	}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

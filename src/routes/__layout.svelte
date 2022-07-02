@@ -109,11 +109,9 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+
+<Nav />
 <main>
-	<!-- Main Navigation-->
-	<Nav />
-	<!-- Content -->
 	<slot />
-	<!-- Footer-->
-	<Footer />
 </main>
+<Footer />

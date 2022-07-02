@@ -10,7 +10,7 @@
 		<!-- <div class="logo-wrapper">
 			<h2>Logo</h2>
 		</div> -->
-		<div class="navlinks-overlay" />
+		<div class="navlinks-overlay {navState ? 'is-active' : ''}" on:click={toggleNav} />
 		<ul class="nav-links {navState ? 'is-active' : ''}">
 			<li class="nav-link active"><a href="/" on:click={toggleNav}>Home</a></li>
 		</ul>
