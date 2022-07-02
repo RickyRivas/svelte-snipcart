@@ -7,7 +7,7 @@ export const productsList = [ {
         images: [
             '/mac.png', '/mac.png', '/mac.png'
         ],
-        inStock: 1,
+        inStock: 0,
         options: {
             storage: [{
                 amount: '1TB',
