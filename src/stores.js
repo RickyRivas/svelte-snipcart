@@ -2,7 +2,7 @@
 export const productsList = [ {
         id: 1,
         name: 'Macbook',
-        price: 2999,
+        price: 1,
         description: 'The MacBook is carved out of solid aluminum, thus giving it a distinctive look and a grayish-white hue. The MacBook Air in particular has a thin and light design. There are two versions of the MacBook Air: the 11-inch, with an 11.6-inch screen; and the 13-inch, with a 13.3-inch screen.',
         images: [
             '/mac.png', '/mac.png', '/mac.png'
@@ -32,11 +32,11 @@ export const productsList = [ {
                 },
                 {
                     amount: '128GB',
-                    additionalValue: 400
+                    additionalValue: .50
                 },
                 {
                     amount: '1TB',
-                    additionalValue: 600
+                    additionalValue: .75
                 }
             ]
         }
@@ -45,7 +45,7 @@ export const productsList = [ {
     {
         id: 3,
         name: 'Ipad',
-        price: 1799,
+        price: 3,
         description: `The iPad is designed for consuming various types of media -- reading books, browsing the Web and watching videos, in particular. It's also marketed as a portable gaming device, and there are hundreds of games for sale in the iPad App Store.`,
         images: ['/ipad.png', '/ipad.png', '/ipad.png'],
         inStock: 2,
@@ -57,7 +57,7 @@ export const productsList = [ {
                 },
                 {
                     amount: '128GB',
-                    additionalValue: 400
+                    additionalValue: .50
                 }
             ]
         }
