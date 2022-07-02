@@ -3,6 +3,9 @@
 	export let productsList;
 </script>
 
+<span class="snipcart-items-count" />
+<span class="snipcart-total-price" />
+<button class="snipcart-customer-signin">My account</button>
 <h2>Our Products</h2>
 <section id="products">
 	{#each productsList as product}
