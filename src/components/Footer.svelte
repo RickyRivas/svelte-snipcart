@@ -4,14 +4,7 @@
 
 <footer>
 	<div class="container">
-		<div class="logo-contain col">
-			<img
-				src="/assets/RivasWebDesignsWhite.svg"
-				alt="Rivas Web Designs Logo"
-				width="300"
-				height="109"
-			/>
-		</div>
+		<div class="logo-contain col" />
 		<div class="col">
 			<h3>Site Navigation</h3>
 			<ul>
