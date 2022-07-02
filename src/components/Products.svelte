@@ -13,6 +13,9 @@
 <style lang="scss">
 	h2 {
 		text-align: center;
+		@media only screen and (min-width: 1024px) {
+			margin-top: 1em;
+		}
 	}
 	#products {
 		width: 100%;
@@ -23,6 +26,7 @@
 		padding: 1em;
 		max-width: 1200px;
 		margin: auto;
+
 		@media only screen and (max-width: 47.975em) {
 			font-size: 3.2vw;
 			/* mintab 480w */

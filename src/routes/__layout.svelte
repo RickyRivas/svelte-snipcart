@@ -1,6 +1,7 @@
 <script>
 	import { browser } from '$app/env';
 	import Nav from '../components/Nav.svelte';
+	import Footer from '../components/Footer.svelte';
 	import global from '../scss/global.scss';
 </script>
 
@@ -114,4 +115,5 @@
 	<!-- Content -->
 	<slot />
 	<!-- Footer-->
+	<Footer />
 </main>
