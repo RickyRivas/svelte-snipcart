@@ -9,13 +9,13 @@
 	{#if browser}
 		<script>
 			window.SnipcartSettings = {
-				publicApiKey: 'NDdjZTI1MTktMjllZi00ZGMxLWEzZWItZTI3MTBiMDJhOTJjNjM3NzQzNTIwMzcwNzk1NTI2',
+				publicApiKey: 'ODVjOGNmZmYtMGZmMC00ODFhLWFhM2QtYzY3Y2U5OWQwZGM4NjM3NzQzNTIwMzcwNzk1NTI2',
 				loadStrategy: 'on-user-interaction'
 			};
 
-			(function () {
-				var c, d;
-				(d = (c = window.SnipcartSettings).version) != null || (c.version = '3.0');
+			(() => {
+				var a, d;
+				(d = (a = window.SnipcartSettings).version) != null || (a.version = '3.0');
 				var s, S;
 				(S = (s = window.SnipcartSettings).currency) != null || (s.currency = 'usd');
 				var l, p;
@@ -24,73 +24,56 @@
 				(u = (w = window.SnipcartSettings).domain) != null || (w.domain = 'cdn.snipcart.com');
 				var m, g;
 				(g = (m = window.SnipcartSettings).protocol) != null || (m.protocol = 'https');
-				var f, v;
-				(v = (f = window.SnipcartSettings).loadCSS) != null || (f.loadCSS = !0);
-				var E =
+				var y =
 						window.SnipcartSettings.version.includes('v3.0.0-ci') ||
 						(window.SnipcartSettings.version != '3.0' &&
 							window.SnipcartSettings.version.localeCompare('3.4.0', void 0, {
 								numeric: !0,
 								sensitivity: 'base'
 							}) === -1),
-					y = ['focus', 'mouseover', 'touchmove', 'scroll', 'keydown'];
+					f = ['focus', 'mouseover', 'touchmove', 'scroll', 'keydown'];
 				window.LoadSnipcart = o;
 				document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', r) : r();
 				function r() {
 					window.SnipcartSettings.loadStrategy
 						? window.SnipcartSettings.loadStrategy === 'on-user-interaction' &&
-						  (y.forEach(function (t) {
-								return document.addEventListener(t, o);
-						  }),
+						  (f.forEach((t) => document.addEventListener(t, o)),
 						  setTimeout(o, window.SnipcartSettings.timeoutDuration))
 						: o();
 				}
-				var a = !1;
+				var c = !1;
 				function o() {
-					if (a) return;
-					a = !0;
+					if (c) return;
+					c = !0;
 					let t = document.getElementsByTagName('head')[0],
-						n = document.querySelector('#snipcart'),
+						e = document.querySelector('#snipcart'),
 						i = document.querySelector(
-							'src[src^="'
-								.concat(window.SnipcartSettings.protocol, '://')
-								.concat(window.SnipcartSettings.domain, '"][src$="snipcart.js"]')
+							`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`
 						),
-						e = document.querySelector(
-							'link[href^="'
-								.concat(window.SnipcartSettings.protocol, '://')
-								.concat(window.SnipcartSettings.domain, '"][href$="snipcart.css"]')
+						n = document.querySelector(
+							`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`
 						);
-					n ||
-						((n = document.createElement('div')),
-						(n.id = 'snipcart'),
-						n.setAttribute('hidden', 'true'),
-						document.body.appendChild(n)),
-						$(n),
+					e ||
+						((e = document.createElement('div')),
+						(e.id = 'snipcart'),
+						e.setAttribute('hidden', 'true'),
+						document.body.appendChild(e)),
+						h(e),
 						i ||
 							((i = document.createElement('script')),
-							(i.src = ''
-								.concat(window.SnipcartSettings.protocol, '://')
-								.concat(window.SnipcartSettings.domain, '/themes/v')
-								.concat(window.SnipcartSettings.version, '/default/snipcart.js')),
+							(i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`),
 							(i.async = !0),
 							t.appendChild(i)),
-						!e &&
-							window.SnipcartSettings.loadCSS &&
-							((e = document.createElement('link')),
-							(e.rel = 'stylesheet'),
-							(e.type = 'text/css'),
-							(e.href = ''
-								.concat(window.SnipcartSettings.protocol, '://')
-								.concat(window.SnipcartSettings.domain, '/themes/v')
-								.concat(window.SnipcartSettings.version, '/default/snipcart.css')),
-							t.prepend(e)),
-						y.forEach(function (h) {
-							return document.removeEventListener(h, o);
-						});
+						n ||
+							((n = document.createElement('link')),
+							(n.rel = 'stylesheet'),
+							(n.type = 'text/css'),
+							(n.href = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`),
+							t.prepend(n)),
+						f.forEach((v) => document.removeEventListener(v, o));
 				}
-				function $(t) {
-					!E ||
+				function h(t) {
+					!y ||
 						((t.dataset.apiKey = window.SnipcartSettings.publicApiKey),
 						window.SnipcartSettings.addProductBehavior &&
 							(t.dataset.configAddProductBehavior = window.SnipcartSettings.addProductBehavior),
