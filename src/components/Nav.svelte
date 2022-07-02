@@ -10,13 +10,12 @@
 		<!-- <div class="logo-wrapper">
 			<h2>Logo</h2>
 		</div> -->
-		<div class="navlinks-overlay {navState ? 'is-active' : ''}" on:click={toggleNav} />
 		<ul class="nav-links {navState ? 'is-active' : ''}">
 			<li class="nav-link active"><a href="/" on:click={toggleNav}>Home</a></li>
 		</ul>
 		<button
 			on:click={toggleNav}
-			class="hamburger {navState ? 'is-active' : ''}"
+			class="hamburger {navState ? 'is-active' : ''} {navState ? 'fixed' : ''}"
 			aria-label="Navigation Toggle"
 		>
 			<span class="hamburger-inner" />
